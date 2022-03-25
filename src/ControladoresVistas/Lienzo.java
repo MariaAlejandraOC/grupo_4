@@ -9,6 +9,7 @@ import Modelos.Circulo;
 import Modelos.Cuadrado;
 import Modelos.FiguraGeometrica;
 import Modelos.Imagen;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -83,6 +84,7 @@ public class Lienzo extends javax.swing.JPanel {
                 this);
     }
 
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -96,11 +98,11 @@ public class Lienzo extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 721, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 501, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -9,6 +9,8 @@ import Modelos.Circulo;
 import Modelos.Cuadrado;
 import Modelos.Imagen;
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -20,14 +22,88 @@ public class Inicio extends javax.swing.JFrame {
      * Creates new form Inicio
      */
     public Inicio() {
+//            ArrayList<Integer>miLista;
+//            miLista=new ArrayList<>();
+//            for(int i=0;i<100;i++){
+//              Scanner sc = new Scanner("ingrese numeros");
+//              int num = sc.nextInt();
+//              miLista.add(num);
+//            }
         initComponents();
-        Cuadrado cuadrado1= new Cuadrado(10, 10, Color.black, Color.red, 90);
-        Circulo circulo1=new Circulo(100, 10, Color.blue, Color.green, 70);
-        Imagen elHongo=new Imagen(10, 100, "src/Imagenes/hongo.png", 64, 64);
-        this.lienzo1.getFiguras().add(cuadrado1);
-        this.lienzo1.getFiguras().add(circulo1);
-        this.lienzo1.getFiguras().add(elHongo);
-    }
+//        Cuadrado cuadrado1= new Cuadrado(10, 10, Color.black, Color.red, 90);
+//        Circulo circulo1=new Circulo(100, 10, Color.blue, Color.green, 70);
+//        Imagen elHongo=new Imagen(10, 100, "src/Imagenes/hongo.png", 64, 64);
+//        this.lienzo1.getFiguras().add(cuadrado1);
+//        this.lienzo1.getFiguras().add(circulo1);
+//        this.lienzo1.getFiguras().add(elHongo);
+//          Cuadrado cuadrado1= new Cuadrado(0, 0, Color.blue, Color.green, 30);
+//          Cuadrado cuadrado2= new Cuadrado(0, 30, Color.blue, Color.green, 30);
+//          this.lienzo1.getFiguras().add(cuadrado1);
+//       this.lienzo1.getFiguras().add(cuadrado2);
+//            double notas[]=new double[128];
+//            0,0,0,0,0,1,1,1 
+//                            ,0,0,0,0,1,1,1,1
+//                            ,0,0,0,0,2,2,2,4
+//                            ,0,0,0,2,4,2,4,4
+//                            ,0,0,0,2,4,2,2,4
+//                            ,0,0,0,0,2,4,4,4
+//                            ,0,0,0,0,0,4,4,4
+//                            ,0,0,0,0,1,1,5,1
+//                            ,0,0,0,1,1,1,5,1
+//                            ,0,0,1,1,1,1,5,5
+//                            ,0,0,4,4,1,5,6,5
+//                            ,0,0,4,4,4,5,5,5
+//                            ,0,0,4,4,5,5,5,5
+//                            ,0,0,0,0,5,5,5,0
+//                            ,0,0,0,2,2,2,0,0
+//                            ,0,0,2,2,2,2,0,0
+            double vector[]=
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+            ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+            ,0,0,0,0,0,0,0,0,0,1,4,4,4,0,0,2
+            ,0,0,0,2,2,0,0,0,1,1,4,4,4,0,2,2
+            ,0,1,2,4,4,2,0,1,1,1,1,4,5,5,2,2
+            ,1,1,2,2,2,4,4,1,1,1,5,5,5,5,2,2
+            ,1,1,2,4,2,4,4,5,5,5,6,5,5,5,0,0
+            ,1,1,4,4,4,4,4,1,1,5,5,5,5,0,0,0};
+            //declaración de iterador
+            int z=0;
+            Color color=Color.WHITE;
+            for(int i=0;i<240;i+=30){
+                for(int j=0;j<480;j+=30){
+                    System.out.println(i);
+
+                    if(vector[z]==0){
+                        color=Color.WHITE;
+                    }
+                    else if(vector[z]==1){
+                        color=Color.RED;
+                    }
+                     else if(vector[z]==2){
+                        color=Color.DARK_GRAY;
+                    }
+                    else if(vector[z]==3){
+                        color=Color.BLACK;
+                    }
+                    else if(vector[z]==4){
+                        color=Color.ORANGE;
+                    }
+                    else if(vector[z]==5){
+                        color=Color.BLUE;
+                    }
+                    else{
+                        color=Color.YELLOW;
+                    }
+                    Cuadrado cuadrado=new Cuadrado(i, j, Color.BLACK, color, 30);
+                    this.lienzo1.getFiguras().add(cuadrado); 
+                    z++;
+                    }
+                
+                }                                                                                                                
+            }
+            
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,17 +118,15 @@ public class Inicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lienzo1.setBackground(new java.awt.Color(255, 255, 255));
-
         javax.swing.GroupLayout lienzo1Layout = new javax.swing.GroupLayout(lienzo1);
         lienzo1.setLayout(lienzo1Layout);
         lienzo1Layout.setHorizontalGroup(
             lienzo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 659, Short.MAX_VALUE)
+            .addGap(0, 977, Short.MAX_VALUE)
         );
         lienzo1Layout.setVerticalGroup(
             lienzo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 652, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -60,16 +134,14 @@ public class Inicio extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lienzo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(57, 57, 57))
+                .addComponent(lienzo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(lienzo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
