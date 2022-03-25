@@ -22,14 +22,9 @@ public class Inicio extends javax.swing.JFrame {
      * Creates new form Inicio
      */
     public Inicio() {
-//            ArrayList<Integer>miLista;
-//            miLista=new ArrayList<>();
-//            for(int i=0;i<100;i++){
-//              Scanner sc = new Scanner("ingrese numeros");
-//              int num = sc.nextInt();
-//              miLista.add(num);
-//            }
+
         initComponents();
+        primeraParte();
 //        Cuadrado cuadrado1= new Cuadrado(10, 10, Color.black, Color.red, 90);
 //        Circulo circulo1=new Circulo(100, 10, Color.blue, Color.green, 70);
 //        Imagen elHongo=new Imagen(10, 100, "src/Imagenes/hongo.png", 64, 64);
@@ -57,7 +52,10 @@ public class Inicio extends javax.swing.JFrame {
 //                            ,0,0,0,0,5,5,5,0
 //                            ,0,0,0,2,2,2,0,0
 //                            ,0,0,2,2,2,2,0,0
-            double vector[]=
+                                                                                                                   
+            }
+    public void primeraParte(){
+         double vector[]=
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
             ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
             ,0,0,0,0,0,0,0,0,0,1,4,4,4,0,0,2
@@ -99,8 +97,8 @@ public class Inicio extends javax.swing.JFrame {
                     z++;
                     }
                 
-                }                                                                                                                
-            }
+                }        
+    }
             
     
 
