@@ -9,6 +9,7 @@ import Modelos.Circulo;
 import Modelos.Cuadrado;
 import Modelos.FiguraGeometrica;
 import Modelos.Imagen;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -33,8 +34,21 @@ public class Lienzo extends javax.swing.JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        //Estudiante2;
         dibujarFiguras(g);
+        
     }
+//    
+//    public void Estudiante2 ()
+//    {
+//        for (int j = 240; j < 481; j=j+30) {     
+//            for (int i = 0; i < 481; i=i+30) {
+//                Cuadrado c1 = new Cuadrado(j, i, Color.black, Color.white,30);
+//                this.getFiguras().add(c1);
+//            }
+//        }
+//    }
+    
     public void dibujarFiguras(Graphics g){
         for(FiguraGeometrica figuraActual: this.figuras){
             if (figuraActual instanceof Cuadrado) {
